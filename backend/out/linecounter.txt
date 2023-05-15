@@ -1,0 +1,23 @@
+===============================================================================
+EXTENSION NAME : linecounter
+EXTENSION VERSION : 0.2.7
+-------------------------------------------------------------------------------
+count time : 2021-12-04 23:42:43
+count workspace : c:\Users\AshishPrakashBhangal\Desktop\Project_Pathak,Vikas\GroceryHub\backend
+total files : 5
+total code lines : 3270
+total comment lines : 179
+total blank lines : 278
+
+    statistics
+   |      extension|     total code|  total comment|    total blank|percent|
+   -------------------------------------------------------------------------
+   |          .json|           2031|              0|              0|     62|
+   |            .js|           1239|            179|            278|     38|
+   -------------------------------------------------------------------------
+app.js, code is 1209, comment is 177, blank is 259.
+mongo.config.js, code is 15, comment is 1, blank is 9.
+mysql.config.js, code is 15, comment is 1, blank is 10.
+package-lock.json, code is 2004, comment is 0, blank is 0.
+package.json, code is 27, comment is 0, blank is 0.
+===============================================================================

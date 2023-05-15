@@ -10,14 +10,16 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@types/mysql": "^2.15.19",
-    "body-parser": "^1.19.0",
     "axios": "^0.24.0",
+    "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "moment": "^2.29.1",
     "mongodb": "^4.1.4",
     "mongoose": "^6.0.13",
-    "mysql": "^2.18.1"
+    "mysql": "^2.18.1",
+    "recombee-api-client": "^3.2.0",
+    "twitter-api-client": "^1.4.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"

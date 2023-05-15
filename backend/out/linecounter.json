@@ -1,0 +1,59 @@
+{
+    "extension": "linecounter",
+    "version": "0.2.7",
+    "workspace": "c:\\Users\\AshishPrakashBhangal\\Desktop\\Project_Pathak,Vikas\\GroceryHub\\backend",
+    "linecount": [
+        {
+            "version": "0.2.7",
+            "counttime": "2021-12-04 23:42:43",
+            "filesum": 5,
+            "codesum": 3270,
+            "commentsum": 179,
+            "blanksum": 278,
+            "statistics": {
+                ".json": {
+                    "code": 2031,
+                    "comment": 0,
+                    "blank": 0
+                },
+                ".js": {
+                    "code": 1239,
+                    "comment": 179,
+                    "blank": 278
+                }
+            },
+            "filelist": [
+                {
+                    "blank": 259,
+                    "code": 1209,
+                    "comment": 177,
+                    "filename": "app.js"
+                },
+                {
+                    "blank": 9,
+                    "code": 15,
+                    "comment": 1,
+                    "filename": "mongo.config.js"
+                },
+                {
+                    "blank": 10,
+                    "code": 15,
+                    "comment": 1,
+                    "filename": "mysql.config.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 2004,
+                    "comment": 0,
+                    "filename": "package-lock.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 27,
+                    "comment": 0,
+                    "filename": "package.json"
+                }
+            ]
+        }
+    ]
+}
