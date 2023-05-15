@@ -1,0 +1,34 @@
+username,customername,payment,orderid,purchasedate,arriveby,actualdeliverydate,pid,Brand,product,Category,prodquantity,quantity,rating,deliverytype,deliveryzip,trxstatus,isreturned,isontime
+sathya,sathya,4.56E+12,1,11/8/2021,11/22/2021,11/15/2021,165,Amul,Butter - Pasteurised,bakery cakes dairy,200 g Tub,3,1,delivery,60616,Disputed,Yes,Yes
+sathya,sathya,4.56E+12,1,11/8/2021,11/22/2021,11/15/2021,161,Nandini,Goodlife - Toned Milk,bakery cakes dairy,1 L Carton,2,1,delivery,60616,Disputed,Yes,Yes
+ninad,ninad,2.34E+12,2,11/8/2021,11/22/2021,11/21/2021,117,Fresho,Mutton - Biryani Pieces,eggs meat fish,1 Kg  ,1,4,pickup,60616,Approved,No,Yes
+john,john,5.44E+13,3,11/8/2021,11/22/2021,11/15/2021,180,Fresho,"Beans - Cluster, Organically Grown",fruits vegetables,250 g ,1,3,delivery,60616,Approved,Yes,Yes
+mounica,Mounica,1.23E+12,4,11/8/2021,11/22/2021,11/21/2021,171,Fresho,Apple - Ambri,fruits vegetables,500 g ,1,1,delivery,60617,Approved,Yes,Yes
+sachin,Sachin,4.55E+14,5,11/8/2021,11/22/2021,11/21/2021,165,Amul,Butter - Pasteurised,bakery cakes dairy,200 g Tub,4,5,delivery,60617,Approved,No,No
+sachin,Sachin,4.55E+14,5,11/8/2021,11/22/2021,11/21/2021,161,Nandini,Goodlife - Toned Milk,bakery cakes dairy,1 L Carton,3,5,delivery,60617,Approved,No,No
+aakash,akash,6.77E+14,6,11/8/2021,11/22/2021,11/15/2021,93,Maaza,Juice - Mango Refresh,beverages,150 ml Carton ,1,5,pickup,60706,Disputed,Yes,Yes
+neena,neena,4.36E+14,7,11/8/2021,11/22/2021,11/15/2021,165,Amul,Butter - Pasteurised,bakery cakes dairy,200 g Tub,1,3,delivery,60617,Disputed,No,No
+smit,Smit,4.34E+12,8,11/8/2021,11/22/2021,11/18/2021,117,Fresho,Mutton - Biryani Pieces,eggs meat fish,1 Kg  ,1,4,pickup,60818,Disputed,Yes,No
+zil,zil ,4.56E+11,9,11/8/2021,11/22/2021,11/15/2021,174,Fresho,Tamarind - Sweet,fruits vegetables,225 g ,1,1,delivery,60818,Disputed,Yes,Yes
+zil,zil ,4.56E+11,9,11/8/2021,11/22/2021,11/15/2021,119,Fresho,"Chicken - Mince, Antibiotic Residue-Free",eggs meat fish,250 g  ,1,1,delivery,60818,Disputed,Yes,Yes
+zil,zil ,4.56E+11,9,11/8/2021,11/22/2021,11/15/2021,97,Fresho,Squid,eggs meat fish,1 kg ,1,1,delivery,60818,Disputed,Yes,Yes
+hezal,Hezal,3.43E+13,10,11/8/2021,11/22/2021,11/15/2021,146,Cadbury,Silk Dairy Milk - Silk Miniatures Collection,snacks branded foods,2x240 g Multipack ,1,4,pickup,60818,Approved,No,No
+hezal,Hezal,3.43E+13,10,11/8/2021,11/22/2021,11/15/2021,145,Cadbury,Celebrations Chocolate Gift Box - Rich Dry Fruit,snacks branded foods,2x177 g Multipack ,1,4,pickup,60818,Approved,No,No
+guru,Guru,5.45E+11,11,11/8/2021,11/22/2021,11/22/2021,93,Maaza,Juice - Mango Refresh,beverages,150 ml Carton ,1,2,pickup,60706,Disputed,Yes,No
+aakash,Aakash,6.67E+13,12,11/8/2021,11/22/2021,11/15/2021,171,Fresho,Apple - Ambri,fruits vegetables,500 g ,1,1,delivery,60616,Disputed,Yes,Yes
+dhiraj,Dhiraj,5.54E+12,13,11/8/2021,11/22/2021,11/28/2021,6,Vauva,Easy Feeding Bowl With Spoon,baby care,1 pc ,1,3,delivery,60616,Disputed,Yes,No
+Dimple,Dimple,3.43E+13,14,11/8/2021,11/22/2021,11/28/2021,4,Bodyguard,Premium Baby Wet Wipes With Aloe Vera - Paraben Free,baby care,72 Pulls  ,1,4,delivery,60616,Approved,Yes,No
+Dimple,Dimple,3.43E+13,14,11/8/2021,11/22/2021,11/28/2021,7,Vauva,Baby Water Teether For Cool Gums,baby care,1 pc ,1,4,delivery,60616,Approved,Yes,No
+shweta,Shweta,4.33E+14,15,11/8/2021,11/22/2021,11/22/2021,142,KiddleMe,Tomatino - Tomato Vegetable Wheat Pasta,snacks branded foods,200 g ,1,1,delivery,60818,Disputed,No,No
+shweta,Shweta,4.33E+14,15,11/8/2021,11/22/2021,11/22/2021,119,Fresho,"Chicken - Mince, Antibiotic Residue-Free",eggs meat fish,250 g  ,1,1,delivery,60818,Disputed,No,No
+alice,alice,5.66E+12,16,11/8/2021,11/22/2021,11/21/2021,97,Fresho,Squid,eggs meat fish,1 kg ,1,2,pickup,60818,Disputed,No,Yes
+alice,alice,5.66E+12,16,11/8/2021,11/22/2021,11/21/2021,149,Milky Mist,Table Butter - Salted,bakery cakes dairy,2x500 g Multipack ,1,2,pickup,60818,Disputed,No,Yes
+johns,john,4.54E+14,17,11/8/2021,11/22/2021,11/22/2021,149,Milky Mist,Table Butter - Salted,bakery cakes dairy,2x500 g Multipack ,1,4,pickup,60616,Disputed,Yes,No
+johns,john,4.54E+14,17,11/8/2021,11/22/2021,11/22/2021,173,Fresho,Grapes - Red Globe  Indian,fruits vegetables,500 g ,1,4,pickup,60616,Disputed,Yes,No
+aishwarya,aishwarya,4.36E+14,18,11/8/2021,11/22/2021,11/28/2021,165,Amul,Butter - Pasteurised,bakery cakes dairy,200 g Tub,8,5,delivery,60617,Approved,Yes,No
+aishwarya,aishwarya,4.36E+14,18,11/8/2021,11/22/2021,11/28/2021,161,Nandini,Goodlife - Toned Milk,bakery cakes dairy,1 L Carton,4,5,delivery,60617,Approved,Yes,No
+deepika,Deepika,4.54E+13,19,11/8/2021,11/22/2021,11/15/2021,144,Nutralite,"Choco Spread Calcium, Hazelnut Spread, Uses Premium Chocolate",snacks branded foods,100 g Jar,1,4,delivery,60818,Approved,Yes,No
+yogesh,yogesh,5.44E+12,20,11/8/2021,11/22/2021,11/18/2021,174,Fresho,Tamarind - Sweet,fruits vegetables,225 g ,1,5,pickup,60616,Disputed,Yes,No
+ramesh,ramesh,5.43E+13,21,11/8/2021,11/22/2021,11/15/2021,119,Fresho,"Chicken - Mince, Antibiotic Residue-Free",eggs meat fish,250 g  ,1,1,pickup,60818,Disputed,Yes,Yes
+johnny,johnny,4.54E+12,22,11/8/2021,11/22/2021,11/15/2021,96,Fresho,"Crab - Dotted, Cleaned & Whole Cut",eggs meat fish,500 g (Gross Weight 800,1,1,pickup,60706,Disputed,Yes,Yes
+johnny,johnny,4.54E+12,22,11/8/2021,11/22/2021,11/15/2021,93,Maaza,Juice - Mango Refresh,beverages,150 ml Carton ,1,1,pickup,60706,Disputed,Yes,Yes

@@ -1,0 +1,130 @@
+// delete existing graph
+match (n) detach delete n;
+
+// verify you have no nodes/relationships in your graph
+match (n) return n;
+
+//remove all conflicting constraints
+DROP CONSTRAINT ON (c:Customers) ASSERT c.id IS UNIQUE;
+DROP CONSTRAINT ON (z:ZipCode) ASSERT z.id IS UNIQUE;
+DROP CONSTRAINT ON (m:Manufacturer) ASSERT m.name IS UNIQUE;
+DROP CONSTRAINT ON (p:Product) ASSERT p.name IS UNIQUE;
+DROP CONSTRAINT ON (o:Order) ASSERT o.id IS UNIQUE;
+DROP CONSTRAINT ON (ct:Category) ASSERT ct.name IS UNIQUE;
+
+//Create Constraints
+CREATE CONSTRAINT ON (c:Customers) ASSERT c.id IS UNIQUE;
+CREATE CONSTRAINT ON (z:ZipCode) ASSERT z.id IS UNIQUE;
+CREATE CONSTRAINT ON (m:Manufacturer) ASSERT m.name IS UNIQUE;
+CREATE CONSTRAINT ON (p:Product) ASSERT p.name IS UNIQUE;
+CREATE CONSTRAINT ON (o:Order) ASSERT o.id IS UNIQUE;
+CREATE CONSTRAINT ON (ct:Category) ASSERT ct.name IS UNIQUE;
+
+
+LOAD CSV WITH HEADERS FROM 'file:///transactions-2021-11-08.csv' AS line 
+WITH line, line.actualdeliverydate AS date
+
+MERGE (zipcode:ZipCode {name:line.deliveryzip, zip: line.deliveryzip})
+SET zipcode.orderId = line.orderid
+
+MERGE (customer:Customers {login_Id: line.username})
+SET customer.name = line.customername
+
+MERGE (category:Category {name: line.Category})
+
+
+
+MERGE (order:Order {name:line.orderid, order_id: line.orderid})
+SET order.orderdate = line.purchasedate,
+	order.orderreturn = line.isreturned,
+	order.orderdontime = line.isontime,
+	order.expecteddelivery = line.arriveby,
+	order.orderactualdeliver = line.actualdeliverydate
+
+MERGE (manufacturer:Manufacturer {name: line.Brand})
+
+MERGE (product:Product {name: line.product})
+SET product.pid = line.pid,
+	product.category = line.Category
+    
+    
+CREATE (order)-[t:CONTAINS]->(product)
+SET t.transaction_status  = line.trxstatus,
+	t.orderId = line.orderid,
+	t.amount = line.quantity,
+	t.quantity = line.prodquantity,
+	t.pid=line.pid
+	
+CREATE (product)-[u:BELONGS_TO]->(category)
+SET u.category=line.Category
+    
+
+CREATE (customer)-[r:PLACED_ORDER]->(order)
+SET r.transaction_status  = line.trxstatus,
+	r.deliveryontime = line.isontime,
+	r.orderId = line.orderid
+
+CREATE (order)-[y:HAS_DELIVERY]->(zipcode)
+SET y.transaction_status  = line.trxstatus,
+	y.deliveryontime = line.isontime,
+	y.customername = line.customername,
+	y.deliveryreturned = line.isreturned,
+	y.review_rating = line.rating,
+	y.category = line.Category,
+	y.deliverytype=line.deliverytype
+
+
+CREATE (manufacturer)-[q:SUPPLIES]->(product)
+SET q.manufacturers  = line.Brand
+	
+;
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+				Queries for Store Manager
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+//Visualize schema
+call db.schema.visualization()
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+//Check the graph created
+match (n) return n;
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+MATCH (order:Order)-[transaction:HAS_DELIVERY]->(zipcode)
+WHERE transaction.deliveryontime = "No"
+WITH order, zipcode, transaction
+RETURN zipcode.zip AS `ZipCode`, count(transaction) AS Count
+ORDER BY Count DESC 
+
+MATCH (order:Order)-[transaction:HAS_DELIVERY]->(zipcode)
+WHERE transaction.transaction_status = "Disputed" 
+WITH order, zipcode, transaction
+RETURN zipcode.zip AS `ZipCode`,transaction.customername AS `Customer`, count(transaction) AS `CNT`
+
+
+MATCH (order:Order)-[transaction:HAS_DELIVERY]->(zipcode)
+WHERE transaction.transaction_status = "Disputed" 
+WITH zipcode,transaction.customername as customername, count(*) as cnt
+where cnt > 1
+RETURN zipcode.zip AS `ZipCode`,customername AS `Customer`, cnt 
+
+
+MATCH (order:Order)-[transaction:HAS_DELIVERY]->(zipcode)
+WHERE transaction.deliveryreturned = "Yes" 
+WITH zipcode,transaction.customername as customername, count(*) as cnt
+ORDER BY cnt DESC LIMIT 3
+RETURN zipcode.zip AS `ZipCode`,customername AS `Customer`, cnt 
+
+
+
+MATCH (order:Order)-[transaction:HAS_DELIVERY]->(zipcode)
+WHERE transaction.deliveryreturned = "Yes" AND transaction.review_rating = "1"
+WITH zipcode,transaction.category AS Category, count(*) as cnt
+RETURN zipcode.zip AS `ZipCode`,Category, cnt 
+
+
